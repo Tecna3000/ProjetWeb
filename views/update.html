@@ -1,0 +1,18 @@
+{{> header}}
+  <form action="/update/{{id}}" method="post">
+    <div>
+      <div>
+        <p>Mot : <input type="text" name="key"></p>
+       
+        <p><label for="avatar">Video:</label></p>
+
+        <p><input type="file" id="avatar" name="video" accept="video/webm"></p>
+        
+        <div>
+          <input type="submit" value="Modifier">
+          <a href="/read/{{id}}">Annuler</a>
+        </div>
+      </div>
+    </div>
+  </form>
+{{> footer}}

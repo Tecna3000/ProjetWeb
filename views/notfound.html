@@ -1,0 +1,28 @@
+{{> header}}
+
+  <div>
+    <div>
+      <h1> Le mot {{key}} n'a pas été trouvé, voulez vous l'ajouter? </h1>
+     {{#authenticated}}
+     <form  class="d-flex" action="/create" method="get">
+        <input class="btn btn-outline-success" type="submit" value="Oui">
+      </form>
+     {{/authenticated}}
+     {{^authenticated}}
+        <a>connectez-vous pour ajouter le mot:</a>
+        <form  class="d-flex" action="/login" method="get">
+            <input class="btn btn-outline-success" type="submit" value="log in" name="" id="">
+        </form>
+        <a >Vous n'avez pas encore de compte? inscrivez vous:</a>
+        <form  class="d-flex" action="/new_user" method="get">
+            <input class="btn btn-outline-success" type="submit" value="sign up">
+        </form>
+      {{/authenticated}} 
+      <form  class="d-flex" action="/" method="get">
+        <input class="btn btn-outline-success" type="submit" value="Non">
+      </form>
+ 
+    </div>
+  </div>
+
+{{> footer}}

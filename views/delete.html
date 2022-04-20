@@ -1,0 +1,14 @@
+{{> header}}
+
+  <div>
+    <div>
+      <h1> Supprimer un mot </h1>
+      <form action="/delete/{{id}}" method="post">
+        <p>Êtes-vous sûr de vouloir supprimer le mot "{{key}}" ?</p>
+        <input type="submit" value="Supprimer">
+        <a href="/search">Annuler<a>
+      </form>
+    </div>
+  </div>
+
+{{> footer}}

@@ -1,0 +1,17 @@
+
+.sign{
+    width: 80%;
+    height: 80%;
+}
+.row {
+ display: flex;
+ }
+ .col{
+    flex: 1;
+    padding: 1em;
+ }
+ h1{
+    color:  #E14594;
+    size:0vmax;
+    font-family: 'Gill Sans MT';
+ }

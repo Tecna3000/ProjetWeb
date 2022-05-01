@@ -1,0 +1,41 @@
+.log{
+    margin: auto;
+    background-color: #BFFFF0;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    border-radius: 1rem;
+}
+.button{
+    background-color: #F38BA0;
+    color:#BFFFF0 ;
+    width: 50%;
+
+}
+.button:active{
+    background-color:#BFFFF0;
+    outline-color: #F38BA0;
+    color: #F38BA0;
+}
+.button:hover{
+    cursor:pointer;
+    background-color: #FFD59E;
+    border-color: #F38BA0;
+    color: #F38BA0;   
+}
+.input{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+h4{
+    font-size: large;
+    font-weight: bold;
+    font-style: oblique;
+    font-family:'Gill Sans MT';
+    color:#FFA1A1;
+    margin-top: 1%;
+}

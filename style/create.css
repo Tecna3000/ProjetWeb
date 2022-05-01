@@ -1,0 +1,41 @@
+.create{
+    margin: auto;
+    background-color: #FFD59E;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    border-radius: 1rem;
+}
+.button3{
+    background-color: #BFFFF0;
+    color:#F38BA0 ;
+    width: 50%;
+
+}
+.button3:active{
+    background-color:#F38BA0;
+    outline-color:#BFFFF0 ;
+    color: #BFFFF0;
+}
+.button3:hover{
+    cursor:pointer;
+    background-color: #F38BA0;
+    border-color: #BFFFF0 ;
+    color: #BFFFF0;   
+}
+.input{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+h4{
+    font-size: large;
+    font-weight: bold;
+    font-style: oblique;
+    font-family:'Gill Sans MT';
+    color:#F38BA0;
+    margin-top: 1%;
+}

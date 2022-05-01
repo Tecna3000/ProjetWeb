@@ -1,0 +1,38 @@
+.bar{
+    background-color: #F38BA0;
+}
+.img{
+    width: 35%;
+    height: 435%;
+    /* margin: 1%; */
+}
+#button{
+    background-color: #BFFFF0;
+    color: #F38BA0;
+
+}
+#button:active{
+    background-color:#F38BA0;
+    outline-color: #BFFFF0;
+    color: #BFFFF0;
+}
+#button:hover{
+    cursor:pointer;
+    background-color: #F38BA0;
+    border-color: #BFFFF0;
+    color: #BFFFF0;   
+}
+body{
+    background-color: #FFF8F3;
+}
+a{
+    font-size:larger;
+    font-family:  Arial;
+    color:#CAF7E3;
+    list-style: none;
+}
+h2{
+    color:  #E14594;
+    font-size:large;
+    font-family: 'Gill Sans MT';
+}

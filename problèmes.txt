@@ -1,5 +1,0 @@
--Quand j'ajoute une nouvelle vidéo avec (create) ou (update), il ne la lit pas aprés, car il ne prends pas la route du fichier.
--J'ai mis les boutons (supprimer) et (modifier) sur la carte ou il y a le mot quand on fait la rechrcher, mais quand on clique dessus il ne dirige pas vers les bonnes page, car il ne récupère pas le (id) du mot.
--Je n'arrive pas à charger le css
-
-

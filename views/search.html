@@ -6,7 +6,7 @@
 
    
           <div>
-            <h1>{{num_found}} mots correspondants </h1>
+            <h2>{{num_found}} mots correspondants </h2>
          </div>
       {{#results}}
       <div class=" mb-3 word " >
@@ -29,7 +29,7 @@
       {{#next_page}}
       <div class="pos" >     
         <a href="/search?query={{query}}&page={{previous_page}}" class="btn button2 mb-3">Page précedante</a>
-        <h1>{{#page}} page {{page}}/{{num_pages}} {{/page}}</h1>
+        <h2>{{#page}} page {{page}}/{{num_pages}} {{/page}}</h2>
         <a href="/search?query={{query}}&page={{next_page}}" class="btn button2 mb-3">Page suivante</a>
       </div>
       {{/next_page}}    

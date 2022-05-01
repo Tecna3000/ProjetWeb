@@ -32,11 +32,11 @@
         {{^authenticated}}
 
           <form  class="d-flex" action="/login" method="get">
-            <input class="btn button2 me-2" type="submit" value="log in" name="" id="">
+            <input class="btn button2 me-2" type="submit" value="se connecter" name="" id="">
           </form>
 
           <form  class="d-flex" action="/new_user" method="get">
-            <input class="btn button2 me-2" type="submit" value="sign up">
+            <input class="btn button2 me-2" type="submit" value="s'inscrire">
           </form>
       
         {{/authenticated}} 
@@ -47,7 +47,7 @@
         {{#authenticated}}
 
             <form action="/logout" method="post">
-              <input class="btn button2 me-2" type="submit" value="logout {{name}} ">
+              <input class="btn button2 me-2" type="submit" value="Se deconécter {{name}} ">
             </form>
         {{/authenticated}} 
       </div>

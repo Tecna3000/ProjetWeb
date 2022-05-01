@@ -35,4 +35,4 @@ let load = function(filename) {
   transaction(words);
 }
 
-load('/amuhome/r20031646/Documents/ProjetWeb/lsf-data-master/vocabulaire.json');
+load('../lsf-data-master/vocabulaire.json');

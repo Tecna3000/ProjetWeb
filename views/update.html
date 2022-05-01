@@ -1,18 +1,18 @@
 {{> header}}
+<div class="create">
   <form action="/update/{{id}}" method="post">
-    <div>
-      <div>
-        <p>Mot : <input type="text" name="key"></p>
+    
+        <p>Mot : <input class="input form-control mb-2" placeholder="{{key}}" type="text" name="key"></p>
        
         <p><label for="avatar">Video:</label></p>
 
-        <p><input type="file" id="avatar" name="video" accept="video/webm"></p>
+        <p><input  class="input form-control mb-2" type="file" id="avatar" name="video" accept="video/webm"></p>
         
         <div>
-          <input type="submit" value="Modifier">
-          <a href="/read/{{id}}">Annuler</a>
+          <input class="btn button3 mb-3" type="submit" value="Modifier">
+          <input class="btn button3 mb-3" type="submit" value="Annuler" href="/search"></input>
         </div>
-      </div>
-    </div>
+        
   </form>
+</div>  
 {{> footer}}

@@ -1,12 +1,13 @@
 {{> header}}
 
-  <div>
-    <div>
-      <h1> Supprimer un mot </h1>
+  <div class="create">
+    <div id="footer">
       <form action="/delete/{{id}}" method="post">
-        <p>Êtes-vous sûr de vouloir supprimer le mot "{{key}}" ?</p>
-        <input type="submit" value="Supprimer">
-        <a href="/search">Annuler<a>
+        <h4>Êtes-vous sûr de vouloir supprimer le mot "{{key}}" ?</h4>
+        <div>
+          <input class=" btn button3 mb-3" type="submit" value="Supprimer">
+          <a class=" btn button3 mb-3" href="/search">Annuler<a>
+        </div>
       </form>
     </div>
   </div>

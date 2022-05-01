@@ -1,19 +1,21 @@
 {{> header}}
 
 {{#authenticated}}
+<div class="create">
   <form action="/create" method="post">
     <div>
       <div>
-        <h1> Ajouter un mot </h1>
-        <p>Mot : <input type="text" name="key"></p>
+        <p> Ajouter un mot </p>
+        <p>Mot : <input class="input form-control mb-2" type="text" name="key"></p>
        
         <p><label for="avatar">Video:</label></p>
 
-        <p><input type="file" id="avatar" name="video" accept="video/webm"></p>
+        <p><input  class="input form-control mb-2" type="file" id="avatar" name="video" accept="video/webm"></p>
         
-        <input type="submit" value="Ajouter">
+        <input class="btn button3 mb-3 " type="submit" value="Ajouter">
       </div>
     </div>
   </form>
+</div>
   {{/authenticated}}
 {{> footer}}

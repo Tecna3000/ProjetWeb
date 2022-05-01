@@ -7,7 +7,8 @@ var app = express();
 app.use(express.static(__dirname +  '/lsf-data-master/videos/'));
 app.use(express.static(__dirname +  '/lsf-data-master/videos/test'));
 app.use(express.static(__dirname + '/style'));
-
+app.use(express.static(__dirname ));
+app.use(express.static(__dirname+ '/../style' ));
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -60,7 +61,6 @@ app.get('/', (req, res) => {
 // })
 app.get('/search', (req, res) => {
   var found = model.search(req.query.query, req.query.page, req.body.order);
-  console.log(req.body.order)
   if(found.num_found > 0){
    res.render('search', found);
  }
@@ -68,11 +68,6 @@ app.get('/search', (req, res) => {
      res.render('notfound');
  }
   
-});
-
-app.get('/read/:id', (req, res) => {
-  var entry = model.read(req.params.id);
-  res.render('read', entry);
 });
 
 app.get('/create', (req, res) => {
@@ -98,6 +93,9 @@ app.get('/login', (req, res) => {
   res.render('new_user');
 });
 
+app.get('/contact',(req, res)=>{
+  res.render('contact');
+});
 
 function post_data_to_word(req) {
   return {
@@ -109,13 +107,13 @@ function post_data_to_word(req) {
 
 app.post('/create', (req, res) => {
   var id = model.create(post_data_to_word(req));
-  res.redirect('/read/' + id);
+  res.redirect('/search');
 });
 
 app.post('/update/:id', (req, res) => {
   var id = req.params.id;
   model.update(id, post_data_to_word(req));
-  res.redirect('/read/' + id);
+  res.redirect('/search');
 });
 
 app.post('/delete/:id', (req, res) => {
@@ -145,8 +143,17 @@ app.post('/logout' ,(req, res) => {
 }); 
 
 app.post('/new_user',(req,res)=>{
-  model.new_user(req.body.name, req.body.password, req.body.role, req.body.code);
+ const id= model.new_user(req.body.name, req.body.password, req.body.role, req.body.code);
+ if(id!=-1){
+  req.session.id = model.login(req.body.name,req.body.password);
+  req.session.name = req.body.name;
+  req.session.role = model.getrole(id)
   res.redirect('/');
+}
+else{
+    res.redirect('/');
+}
+
 })
 
 // app.post('/search', (req,res)=>{

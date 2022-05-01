@@ -1,38 +1,40 @@
 {{> header}}
 
-  <div id="test">
-    <div>
-      <h1>{{num_found}} mots trouvés {{#page}} (page {{page}}/{{num_pages}}) {{/page}}</h1>
-    </div>
 
+<div  class="container ">
+  <div class="row justify-content-md-center mb-3 results" >
 
-  <div  class="container ">
-    <div class="row justify-content-md-center mb-3" >
+   
+          <div>
+            <h1>{{num_found}} mots correspondants </h1>
+         </div>
       {{#results}}
-      <div class="mb-3" style="width: 23rem;">
-        <a class="card justify-content-md-center mb-3 bg-dark h-200" href="/read/{{entry}}" > 
-          <p >{{key}}</p>
-      
-          <video  width="320" height="240" controls>
+      <div class=" mb-3 word " >
+    
+          <p  >{{key}}</p>
+          <video  class="container-fluid" controls>
            <source src="{{video}}" type="video/webm">
           </video>
-        {{#admin}}
-            <a href="/update/{{entry}}">Modifier</a>
-            <a href="/delete/{{entry}}">Supprimer</a>
-        {{/admin}}
-        </a>
-        
+             {{#admin}}
+              <a class="btn button2 w1 mb-3" href="/update/{{entry}}">Modifier</a>
+              <a class="btn button2 w1 mb-3" href="/delete/{{entry}}">Supprimer</a>
+             {{/admin}}
+      
+      <div>
+   
+        </div>
       </div>
-      {{/results}}
-    </div> 
-  </div>
+         {{/results}}
 
-  {{#next_page}}
+      {{#next_page}}
+      <div class="pos" >     
+        <a href="/search?query={{query}}&page={{previous_page}}" class="btn button2 mb-3">Page précedante</a>
+        <h1>{{#page}} page {{page}}/{{num_pages}} {{/page}}</h1>
+        <a href="/search?query={{query}}&page={{next_page}}" class="btn button2 mb-3">Page suivante</a>
+      </div>
+      {{/next_page}}    
+  </div> 
 
-    <div>
-      <a href="/search?query={{query}}&page={{next_page}}" class="btn btn-outline-success">Page suivante</a>
-    </div>
-
-  {{/next_page}}
+</div>
 
 {{> footer}}
